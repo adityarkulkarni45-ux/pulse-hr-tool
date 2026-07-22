@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pulse-hr-backend
+    env: node
+    buildCommand: echo "No build needed - zero dependencies"
+    startCommand: node backend/server.js
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: NODE_ENV
+        value: production

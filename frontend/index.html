@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pulse — HR Management Tool</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="role-gate" class="role-gate">
+    <div class="role-card">
+      <div class="role-brand">
+        <span class="role-brand-mark">P</span>
+        <span class="role-brand-name">Pulse</span>
+      </div>
+      <p class="role-sub">HR Management Tool — prototype</p>
+      <p class="role-label">Sign in as</p>
+      <div class="role-options">
+        <button class="role-btn" data-role="employee">
+          <span class="role-btn-title">Employee</span>
+          <span class="role-btn-desc">View directory & apply for leave</span>
+        </button>
+      </div>
+      <div id="employee-select-wrap" class="employee-select-wrap hidden">
+        <label for="employee-select">Which employee are you?</label>
+        <select id="employee-select"></select>
+        <button id="employee-continue" class="continue-btn">Continue</button>
+      </div>
+      <div class="admin-access">
+        <a href="#" id="admin-access-link">🔐 Admin Access</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Password Modal -->
+  <div id="admin-password-modal" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Admin Access</h2>
+      <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px;">Enter admin password to continue</p>
+      <form id="admin-password-form">
+        <label>Password<input required type="password" id="admin-password-input" placeholder="Enter admin password" /></label>
+        <div id="admin-error" class="admin-error hidden">Incorrect password. Please try again.</div>
+        <div class="modal-actions">
+          <button type="button" class="ghost-btn" id="cancel-admin-btn">Cancel</button>
+          <button type="submit" class="primary-btn">Continue</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">P</span>
+        <span class="brand-name">Pulse</span>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">Dashboard</button>
+        <button class="nav-item" data-view="directory">Employee Directory</button>
+        <button class="nav-item" data-view="leaves">Leave Management</button>
+      </nav>
+      <div class="session">
+        <div class="session-role" id="session-role"></div>
+        <div class="session-name" id="session-name"></div>
+        <button id="switch-role" class="switch-btn">Switch role</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- Dashboard -->
+      <section id="view-dashboard" class="view">
+        <header class="view-header">
+          <h1>Dashboard</h1>
+          <p>A quick pulse on your organization.</p>
+        </header>
+        
+        <!-- Quick Stats -->
+        <div class="stat-grid" id="stat-grid"></div>
+        
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+          
+          <!-- Departments Panel -->
+          <div class="dashboard-card departments-card">
+            <div class="card-header">
+              <h2>🏢 Departments</h2>
+              <span class="card-badge" id="dept-count">0</span>
+            </div>
+            <div id="dept-chips" class="chips"></div>
+          </div>
+          
+          <!-- Recent Activities Panel -->
+          <div class="dashboard-card activities-card">
+            <div class="card-header">
+              <h2>📋 Recent Activities</h2>
+            </div>
+            <div id="recent-activities" class="activities-list"></div>
+          </div>
+          
+          <!-- Leave Overview Panel -->
+          <div class="dashboard-card leave-overview-card">
+            <div class="card-header">
+              <h2>🏖️ Leave Overview</h2>
+            </div>
+            <div id="leave-overview" class="leave-overview-content"></div>
+          </div>
+          
+          <!-- Quick Actions Panel -->
+          <div class="dashboard-card quick-actions-card">
+            <div class="card-header">
+              <h2>⚡ Quick Actions</h2>
+            </div>
+            <div class="quick-actions-grid" id="quick-actions"></div>
+          </div>
+          
+          <!-- Top Employees Panel -->
+          <div class="dashboard-card top-employees-card">
+            <div class="card-header">
+              <h2>⭐ Recent Additions</h2>
+            </div>
+            <div id="recent-employees" class="recent-employees-list"></div>
+          </div>
+          
+          <!-- Department Distribution Chart -->
+          <div class="dashboard-card chart-card">
+            <div class="card-header">
+              <h2>📊 Department Distribution</h2>
+            </div>
+            <div id="dept-chart" class="chart-container"></div>
+          </div>
+          
+          <!-- Leave Status Chart -->
+          <div class="dashboard-card chart-card">
+            <div class="card-header">
+              <h2>📈 Leave Status</h2>
+            </div>
+            <div id="leave-status-chart" class="chart-container"></div>
+          </div>
+          
+          <!-- System Status Panel -->
+          <div class="dashboard-card system-status-card">
+            <div class="card-header">
+              <h2>💻 System Status</h2>
+            </div>
+            <div class="system-status-content">
+              <div class="status-item">
+                <span class="status-dot status-active"></span>
+                <span>Server Status: <strong>Active</strong></span>
+              </div>
+              <div class="status-item">
+                <span class="status-dot status-active"></span>
+                <span>Database: <strong>Connected</strong></span>
+              </div>
+              <div class="status-item">
+                <span class="status-dot status-active"></span>
+                <span>Last Sync: <strong id="last-sync-time">Just now</strong></span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- Directory -->
+      <section id="view-directory" class="view hidden">
+        <header class="view-header">
+          <button id="back-to-dashboard-btn" class="back-btn hidden">← Back to Dashboard</button>
+          <div class="view-header-content">
+            <h1>Employee Directory</h1>
+            <p id="directory-sub">Everyone at the company.</p>
+          </div>
+          <button id="add-employee-btn" class="primary-btn hidden">+ Add employee</button>
+        </header>
+        <div class="table-wrap">
+          <table class="data-table" id="employee-table">
+            <thead>
+              <tr>
+                <th>Photo</th><th>ID</th><th>Name</th><th>Email</th><th>Department</th><th>Designation</th><th>Joined</th><th>Status</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="employee-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Leaves -->
+      <section id="view-leaves" class="view hidden">
+        <header class="view-header">
+          <button id="back-to-dashboard-leaves-btn" class="back-btn hidden">← Back to Dashboard</button>
+          <div class="view-header-content">
+            <h1>Leave Management</h1>
+            <p id="leaves-sub">Track and manage time off.</p>
+          </div>
+          <button id="apply-leave-btn" class="primary-btn hidden">+ Apply for leave</button>
+        </header>
+        <div class="table-wrap">
+          <table class="data-table" id="leave-table">
+            <thead>
+              <tr>
+                <th>Employee</th><th>Type</th><th>From</th><th>To</th><th>Reason</th><th>Status</th><th></th>
+              </tr>
+            </thead>
+            <tbody id="leave-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Add Employee Modal -->
+  <div id="employee-modal" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Add employee</h2>
+      <form id="employee-form">
+        <label>Full name<input required name="name" type="text" placeholder="John Doe" /></label>
+        <label>Email<input required name="email" type="email" placeholder="john.doe@company.com" /></label>
+        <label>Department<input required name="department" type="text" placeholder="Engineering" /></label>
+        <label>Designation<input required name="designation" type="text" placeholder="Software Engineer" /></label>
+        <label>Joining date<input name="joiningDate" type="date" /></label>
+        
+        <div class="photo-section">
+          <label class="photo-label">Employee Photo (Optional)</label>
+          <div class="photo-options">
+            <button type="button" id="capture-photo-btn" class="photo-btn">📷 Capture Photo</button>
+            <button type="button" id="upload-photo-btn" class="photo-btn">📁 Upload Photo</button>
+          </div>
+          <input type="file" id="photo-upload-input" accept="image/*" style="display: none;" />
+          <div id="photo-preview" class="photo-preview hidden">
+            <img id="photo-preview-img" src="" alt="Preview" />
+            <button type="button" id="remove-photo-btn" class="remove-photo-btn">✕</button>
+          </div>
+          <canvas id="photo-canvas" style="display: none;"></canvas>
+        </div>
+        
+        <div class="modal-actions">
+          <button type="button" class="ghost-btn" data-close-modal>Cancel</button>
+          <button type="submit" class="primary-btn">Add employee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Edit Employee Modal -->
+  <div id="edit-employee-modal" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Edit employee</h2>
+      <form id="edit-employee-form">
+        <input type="hidden" id="edit-employee-id" />
+        <label>Full name<input required name="name" type="text" id="edit-name" placeholder="John Doe" /></label>
+        <label>Email<input required name="email" type="email" id="edit-email" placeholder="john.doe@company.com" /></label>
+        <label>Department<input required name="department" type="text" id="edit-department" placeholder="Engineering" /></label>
+        <label>Designation<input required name="designation" type="text" id="edit-designation" placeholder="Software Engineer" /></label>
+        <label>Joining date<input name="joiningDate" type="date" id="edit-joiningDate" /></label>
+        <label>Status
+          <select name="status" id="edit-status">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+          </select>
+        </label>
+        
+        <div class="photo-section">
+          <label class="photo-label">Employee Photo (Optional)</label>
+          <div class="photo-options">
+            <button type="button" id="edit-capture-photo-btn" class="photo-btn">📷 Capture Photo</button>
+            <button type="button" id="edit-upload-photo-btn" class="photo-btn">📁 Upload Photo</button>
+          </div>
+          <input type="file" id="edit-photo-upload-input" accept="image/*" style="display: none;" />
+          <div id="edit-photo-preview" class="photo-preview hidden">
+            <img id="edit-photo-preview-img" src="" alt="Preview" />
+            <button type="button" id="edit-remove-photo-btn" class="remove-photo-btn">✕</button>
+          </div>
+        </div>
+        
+        <div class="modal-actions">
+          <button type="button" class="ghost-btn" data-close-modal>Cancel</button>
+          <button type="submit" class="primary-btn">Update employee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Webcam Capture Modal -->
+  <div id="webcam-modal" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Capture Photo</h2>
+      <div class="webcam-container">
+        <video id="webcam-video" autoplay playsinline></video>
+        <canvas id="webcam-canvas" style="display: none;"></canvas>
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="ghost-btn" id="cancel-webcam-btn">Cancel</button>
+        <button type="button" class="primary-btn" id="capture-webcam-btn">📷 Capture</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Apply Leave Modal -->
+  <div id="leave-modal" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Apply for leave</h2>
+      <form id="leave-form">
+        <label>Leave type
+          <select name="type" required>
+            <option>Casual Leave</option>
+            <option>Sick Leave</option>
+            <option>Earned Leave</option>
+          </select>
+        </label>
+        <label>From<input required name="fromDate" type="date" /></label>
+        <label>To<input required name="toDate" type="date" /></label>
+        <label>Reason<textarea name="reason" rows="3" placeholder="Optional: Reason for leave"></textarea></label>
+        <div class="modal-actions">
+          <button type="button" class="ghost-btn" data-close-modal>Cancel</button>
+          <button type="submit" class="primary-btn">Submit request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Rejection Reason Modal -->
+  <div id="rejection-modal" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2>Reject Leave Request</h2>
+      <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px;">Please provide a reason for rejection</p>
+      <form id="rejection-form">
+        <label>Rejection Reason
+          <textarea required name="rejectionReason" rows="4" placeholder="e.g., Insufficient leave balance, Already have planned leaves, Team unavailable..."></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="button" class="ghost-btn" id="cancel-rejection-btn">Cancel</button>
+          <button type="submit" class="primary-btn" style="background: #B4260A;">Reject Leave</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

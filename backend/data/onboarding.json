@@ -1,0 +1,184 @@
+[
+  {
+    "id": "O001",
+    "employeeId": "EMP001",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": true
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": true
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "O002",
+    "employeeId": "EMP002",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": false
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": false
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "O003",
+    "employeeId": "EMP969",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": false
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": false
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "O004",
+    "employeeId": "EMP970",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": false
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": false
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "O005",
+    "employeeId": "EMP971",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": false
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": false
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "O006",
+    "employeeId": "E001",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": false
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": false
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "id": "O007",
+    "employeeId": "EMP972",
+    "items": [
+      {
+        "id": "item1",
+        "label": "Send welcome email",
+        "completed": false
+      },
+      {
+        "id": "item2",
+        "label": "Set up workstation",
+        "completed": false
+      },
+      {
+        "id": "item3",
+        "label": "Assign system access",
+        "completed": false
+      },
+      {
+        "id": "item4",
+        "label": "Schedule orientation",
+        "completed": false
+      }
+    ]
+  }
+]

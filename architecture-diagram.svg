@@ -1,0 +1,81 @@
+<svg viewBox="0 0 980 640" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <rect width="980" height="640" fill="#F6F7F9"/>
+
+  <text x="490" y="38" font-size="22" font-weight="700" fill="#1B2430" text-anchor="middle">Pulse — HR Management Tool: System Architecture</text>
+
+  <!-- Client Layer -->
+  <rect x="60" y="70" width="860" height="110" rx="10" fill="#FFFFFF" stroke="#E3E7EC" stroke-width="1.5"/>
+  <text x="80" y="95" font-size="13" font-weight="700" fill="#57616F">CLIENT LAYER</text>
+
+  <rect x="90" y="110" width="240" height="55" rx="8" fill="#E6EEEC" stroke="#2F5D62"/>
+  <text x="210" y="132" font-size="13" font-weight="700" fill="#2F5D62" text-anchor="middle">Browser UI</text>
+  <text x="210" y="150" font-size="11" fill="#2F5D62" text-anchor="middle">HTML / CSS / vanilla JS</text>
+
+  <rect x="360" y="110" width="240" height="55" rx="8" fill="#E6EEEC" stroke="#2F5D62"/>
+  <text x="480" y="132" font-size="13" font-weight="700" fill="#2F5D62" text-anchor="middle">Role-based Views</text>
+  <text x="480" y="150" font-size="11" fill="#2F5D62" text-anchor="middle">HR Admin  |  Employee</text>
+
+  <rect x="630" y="110" width="240" height="55" rx="8" fill="#E6EEEC" stroke="#2F5D62"/>
+  <text x="750" y="132" font-size="13" font-weight="700" fill="#2F5D62" text-anchor="middle">fetch() API client</text>
+  <text x="750" y="150" font-size="11" fill="#2F5D62" text-anchor="middle">JSON over HTTP</text>
+
+  <!-- Arrow down -->
+  <line x1="490" y1="180" x2="490" y2="215" stroke="#57616F" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="505" y="202" font-size="11" fill="#57616F">HTTPS / REST</text>
+
+  <!-- Application Layer -->
+  <rect x="60" y="220" width="860" height="150" rx="10" fill="#FFFFFF" stroke="#E3E7EC" stroke-width="1.5"/>
+  <text x="80" y="245" font-size="13" font-weight="700" fill="#57616F">APPLICATION LAYER — Node.js HTTP Server</text>
+
+  <rect x="90" y="260" width="180" height="90" rx="8" fill="#EAF1FF" stroke="#3559A6"/>
+  <text x="180" y="282" font-size="12.5" font-weight="700" fill="#3559A6" text-anchor="middle">Router</text>
+  <text x="180" y="300" font-size="10.5" fill="#3559A6" text-anchor="middle">Parses URL + method,</text>
+  <text x="180" y="313" font-size="10.5" fill="#3559A6" text-anchor="middle">dispatches to handlers</text>
+
+  <rect x="300" y="260" width="180" height="90" rx="8" fill="#EAF1FF" stroke="#3559A6"/>
+  <text x="390" y="282" font-size="12.5" font-weight="700" fill="#3559A6" text-anchor="middle">Employee Module</text>
+  <text x="390" y="300" font-size="10.5" fill="#3559A6" text-anchor="middle">CRUD, onboarding,</text>
+  <text x="390" y="313" font-size="10.5" fill="#3559A6" text-anchor="middle">offboarding logic</text>
+
+  <rect x="510" y="260" width="180" height="90" rx="8" fill="#EAF1FF" stroke="#3559A6"/>
+  <text x="600" y="282" font-size="12.5" font-weight="700" fill="#3559A6" text-anchor="middle">Leave Module</text>
+  <text x="600" y="300" font-size="10.5" fill="#3559A6" text-anchor="middle">Apply, approve,</text>
+  <text x="600" y="313" font-size="10.5" fill="#3559A6" text-anchor="middle">reject workflow</text>
+
+  <rect x="720" y="260" width="170" height="90" rx="8" fill="#EAF1FF" stroke="#3559A6"/>
+  <text x="805" y="282" font-size="12.5" font-weight="700" fill="#3559A6" text-anchor="middle">Dashboard Module</text>
+  <text x="805" y="300" font-size="10.5" fill="#3559A6" text-anchor="middle">Aggregates stats</text>
+  <text x="805" y="313" font-size="10.5" fill="#3559A6" text-anchor="middle">for the summary view</text>
+
+  <!-- Arrow down -->
+  <line x1="490" y1="370" x2="490" y2="405" stroke="#57616F" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="505" y="392" font-size="11" fill="#57616F">Read / Write</text>
+
+  <!-- Data Layer -->
+  <rect x="60" y="410" width="860" height="120" rx="10" fill="#FFFFFF" stroke="#E3E7EC" stroke-width="1.5"/>
+  <text x="80" y="435" font-size="13" font-weight="700" fill="#57616F">DATA LAYER</text>
+
+  <rect x="90" y="450" width="230" height="60" rx="8" fill="#FBEDE1" stroke="#B4530A"/>
+  <text x="205" y="474" font-size="12.5" font-weight="700" fill="#B4530A" text-anchor="middle">db.js helper</text>
+  <text x="205" y="492" font-size="10.5" fill="#B4530A" text-anchor="middle">read / write / ID generation</text>
+
+  <rect x="350" y="450" width="230" height="60" rx="8" fill="#FBEDE1" stroke="#B4530A"/>
+  <text x="465" y="474" font-size="12.5" font-weight="700" fill="#B4530A" text-anchor="middle">employees.json</text>
+  <text x="465" y="492" font-size="10.5" fill="#B4530A" text-anchor="middle">employee records</text>
+
+  <rect x="610" y="450" width="230" height="60" rx="8" fill="#FBEDE1" stroke="#B4530A"/>
+  <text x="725" y="474" font-size="12.5" font-weight="700" fill="#B4530A" text-anchor="middle">leaves.json</text>
+  <text x="725" y="492" font-size="10.5" fill="#B4530A" text-anchor="middle">leave request records</text>
+
+  <!-- Note box -->
+  <rect x="60" y="550" width="860" height="70" rx="10" fill="#F0F0F0" stroke="#CBD2D9"/>
+  <text x="80" y="573" font-size="12" font-weight="700" fill="#57616F">Production upgrade path:</text>
+  <text x="80" y="592" font-size="11.5" fill="#57616F">Replace JSON files with PostgreSQL/MongoDB · Add JWT-based auth &amp; RBAC middleware ·</text>
+  <text x="80" y="607" font-size="11.5" fill="#57616F">Containerize (Docker) · Add input validation layer · Move frontend to React for scale</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#57616F"/>
+    </marker>
+  </defs>
+</svg>

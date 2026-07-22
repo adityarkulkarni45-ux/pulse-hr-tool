@@ -1,0 +1,111 @@
+================================================================
+           GIT COMMANDS TO PUSH DEPLOYMENT FILES
+================================================================
+
+OPTION 1: USE AUTOMATED SCRIPT (EASIEST)
+-----------------------------------------
+1. Double-click: push-deployment-files.bat
+2. Wait for completion
+3. Done!
+
+
+OPTION 2: MANUAL COMMANDS (Copy one at a time)
+-----------------------------------------------
+
+Step 1: Navigate to project folder
+-----------------------------------
+cd c:\Users\adity\Downloads\Pulse-HR-Tool-Prototype\hr-tool
+
+
+Step 2: Check Git status
+-------------------------
+git status
+
+
+Step 3: Add all files
+----------------------
+git add .
+
+
+Step 4: Commit changes
+-----------------------
+git commit -m "Add deployment configurations for Render and Vercel"
+
+
+Step 5: Push to GitHub
+-----------------------
+git push
+
+
+IF PUSH FAILS - First Time Setup
+---------------------------------
+If you haven't pushed to GitHub yet:
+
+git init
+git add .
+git commit -m "Initial commit with deployment configs"
+git remote add origin https://github.com/adityarkulkarni45-ux/pulse-hr-tool.git
+git branch -M main
+git push -u origin main
+
+
+CREDENTIALS WHEN PROMPTED
+--------------------------
+Username: adityarkulkarni45-ux
+Password: [Your Personal Access Token]
+
+Get token at: https://github.com/settings/tokens/new
+
+
+VERIFY FILES WERE ADDED
+------------------------
+After commit, check what was added:
+git log --oneline -1
+git diff HEAD~1 --name-only
+
+
+FILES THAT SHOULD BE ADDED
+---------------------------
+✓ render.yaml
+✓ vercel.json
+✓ package.json
+✓ .gitignore
+✓ DEPLOYMENT-GUIDE.md
+✓ QUICK-DEPLOY.md
+✓ DEPLOYMENT-CHECKLIST.txt
+✓ ENVIRONMENT-VARIABLES.md
+✓ push-to-github-auto.bat
+✓ push-deployment-files.bat
+✓ frontend/app.js (updated)
+✓ backend/server.js (updated)
+
+
+CHECK ON GITHUB
+----------------
+After successful push, visit:
+https://github.com/adityarkulkarni45-ux/pulse-hr-tool
+
+You should see all the new files!
+
+
+TROUBLESHOOTING
+---------------
+
+Error: "fatal: not a git repository"
+→ Run: git init
+→ Then run setup commands above
+
+Error: "Authentication failed"
+→ Use Personal Access Token, not password
+→ Get token: https://github.com/settings/tokens/new
+
+Error: "nothing to commit"
+→ Changes already committed
+→ Just run: git push
+
+Error: "failed to push some refs"
+→ Run: git pull origin main --rebase
+→ Then: git push
+
+
+================================================================

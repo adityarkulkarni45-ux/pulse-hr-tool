@@ -1,0 +1,61 @@
+================================
+ CLEAR BROWSER CACHE - REQUIRED
+================================
+
+You MUST clear your browser cache to see the new changes!
+
+METHOD 1: Quick Hard Refresh
+-----------------------------
+1. Close ALL tabs with localhost:4000
+2. Open ONE new tab
+3. Type: localhost:4000
+4. Press: Ctrl + Shift + R (HOLD ALL 3 KEYS TOGETHER)
+5. Wait for page to load
+
+METHOD 2: DevTools Clear Cache
+-------------------------------
+1. Go to: localhost:4000
+2. Press F12 (Developer Tools will open)
+3. Right-click the REFRESH button (next to address bar)
+4. Click: "Empty Cache and Hard Reload"
+
+METHOD 3: Full Cache Clear
+---------------------------
+1. Press: Ctrl + Shift + Delete
+2. Check: "Cached images and files"
+3. Time range: "All time"
+4. Click: "Clear data"
+5. Close ALL browser tabs
+6. Open new tab: localhost:4000
+
+METHOD 4: Try Different Browser
+--------------------------------
+If nothing works, try:
+- Microsoft Edge
+- Firefox
+- Chrome Incognito Mode (Ctrl + Shift + N)
+
+================================
+ WHAT YOU SHOULD SEE
+================================
+
+After clearing cache, you should see:
+
+LOGIN SCREEN:
+✓ Only "Employee" button
+✓ NO "HR Admin" button
+✓ "🔐 Admin Access" link at bottom
+
+EMPLOYEE TABLE (after login):
+✓ Photo column (first column)
+✓ ID column (second column) showing EMP001, EMP002
+✓ Name, Email, Department, etc.
+
+================================
+ SERVER IS RUNNING
+================================
+
+Server: http://localhost:4000
+Admin Password: admin123
+
+================================

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "R311",
+    "cycleId": "RC003",
+    "employeeId": "E311",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E311",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R350",
+    "cycleId": "RC003",
+    "employeeId": "E350",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E350",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R390",
+    "cycleId": "RC003",
+    "employeeId": "E390",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E390",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R430",
+    "cycleId": "RC004",
+    "employeeId": "E430",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E430",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R470",
+    "cycleId": "RC004",
+    "employeeId": "E470",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E470",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R510",
+    "cycleId": "RC005",
+    "employeeId": "E510",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E510",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R550",
+    "cycleId": "RC005",
+    "employeeId": "E550",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E550",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R589",
+    "cycleId": "RC005",
+    "employeeId": "E589",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E589",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R629",
+    "cycleId": "RC006",
+    "employeeId": "E629",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E629",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R669",
+    "cycleId": "RC006",
+    "employeeId": "E669",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E669",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R709",
+    "cycleId": "RC007",
+    "employeeId": "E709",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E709",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R749",
+    "cycleId": "RC007",
+    "employeeId": "E749",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E749",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R789",
+    "cycleId": "RC007",
+    "employeeId": "E789",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E789",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R828",
+    "cycleId": "RC008",
+    "employeeId": "E828",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E828",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R868",
+    "cycleId": "RC008",
+    "employeeId": "E868",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E868",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R908",
+    "cycleId": "RC009",
+    "employeeId": "E908",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E908",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R948",
+    "cycleId": "RC009",
+    "employeeId": "E948",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E948",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R988",
+    "cycleId": "RC009",
+    "employeeId": "E988",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E988",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R1028",
+    "cycleId": "RC010",
+    "employeeId": "E1028",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E1028",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R1067",
+    "cycleId": "RC010",
+    "employeeId": "E1067",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E1067",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R108",
+    "cycleId": "RC001",
+    "employeeId": "E108",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E108",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R148",
+    "cycleId": "RC001",
+    "employeeId": "E148",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E148",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R188",
+    "cycleId": "RC001",
+    "employeeId": "E188",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E188",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R228",
+    "cycleId": "RC002",
+    "employeeId": "E228",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E228",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R268",
+    "cycleId": "RC002",
+    "employeeId": "E268",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E268",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R307",
+    "cycleId": "RC003",
+    "employeeId": "E307",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E307",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R347",
+    "cycleId": "RC003",
+    "employeeId": "E347",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E347",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R387",
+    "cycleId": "RC003",
+    "employeeId": "E387",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E387",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R427",
+    "cycleId": "RC004",
+    "employeeId": "E427",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E427",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R467",
+    "cycleId": "RC004",
+    "employeeId": "E467",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E467",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R507",
+    "cycleId": "RC005",
+    "employeeId": "E507",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E507",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R546",
+    "cycleId": "RC005",
+    "employeeId": "E546",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E546",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R586",
+    "cycleId": "RC005",
+    "employeeId": "E586",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E586",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R626",
+    "cycleId": "RC006",
+    "employeeId": "E626",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E626",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R666",
+    "cycleId": "RC006",
+    "employeeId": "E666",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E666",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R706",
+    "cycleId": "RC007",
+    "employeeId": "E706",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E706",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R746",
+    "cycleId": "RC007",
+    "employeeId": "E746",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E746",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R785",
+    "cycleId": "RC007",
+    "employeeId": "E785",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E785",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R825",
+    "cycleId": "RC008",
+    "employeeId": "E825",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E825",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R865",
+    "cycleId": "RC008",
+    "employeeId": "E865",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E865",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R905",
+    "cycleId": "RC009",
+    "employeeId": "E905",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E905",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R945",
+    "cycleId": "RC009",
+    "employeeId": "E945",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E945",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R984",
+    "cycleId": "RC009",
+    "employeeId": "E984",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E984",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R1024",
+    "cycleId": "RC010",
+    "employeeId": "E1024",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E1024",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R1064",
+    "cycleId": "RC010",
+    "employeeId": "E1064",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E1064",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R105",
+    "cycleId": "RC001",
+    "employeeId": "E105",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E105",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R145",
+    "cycleId": "RC001",
+    "employeeId": "E145",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E145",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R185",
+    "cycleId": "RC001",
+    "employeeId": "E185",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E185",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R224",
+    "cycleId": "RC002",
+    "employeeId": "E224",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E224",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  },
+  {
+    "id": "R264",
+    "cycleId": "RC002",
+    "employeeId": "E264",
+    "reviewerId": null,
+    "selfAssessment": "Self assessment for employee E264",
+    "managerRating": null,
+    "managerComments": "",
+    "status": "Self-Assessment Submitted"
+  }
+]

@@ -1,0 +1,47 @@
+# Node modules (if any are added later)
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Kiro internal files (optional - can keep for development)
+# .kiro/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+
+# Build outputs
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# Large uploads folder (optional - uncomment if photos are too large)
+# backend/uploads/
+
+# Keep empty directories
+!backend/uploads/.gitkeep

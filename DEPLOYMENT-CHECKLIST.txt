@@ -1,0 +1,171 @@
+================================================================
+           DEPLOYMENT CHECKLIST
+           Backend: Render | Frontend: Vercel
+================================================================
+
+PRE-DEPLOYMENT
+--------------
+[ ] Project pushed to GitHub
+[ ] All files committed
+[ ] Tests passing locally
+[ ] Admin password changed (optional)
+[ ] Test data cleaned (optional)
+
+RENDER ACCOUNT (Backend)
+------------------------
+[ ] Go to render.com
+[ ] Sign up with GitHub
+[ ] Authorize Render to access repositories
+
+DEPLOY BACKEND
+--------------
+[ ] Click "New +" → "Web Service"
+[ ] Connect repository: pulse-hr-tool
+[ ] Name: pulse-hr-backend
+[ ] Branch: main
+[ ] Build Command: (leave empty)
+[ ] Start Command: node backend/server.js
+[ ] Instance Type: Free
+[ ] Click "Create Web Service"
+[ ] Wait for deployment (2-3 min)
+[ ] Copy URL (e.g., https://pulse-hr-backend.onrender.com)
+[ ] Test: Open URL/api/dashboard in browser
+[ ] Should see JSON data
+
+UPDATE FRONTEND
+---------------
+[ ] Open frontend/app.js
+[ ] Find line: const API = window.location.hostname...
+[ ] Replace with your Render URL
+[ ] Example: "https://your-backend.onrender.com/api"
+[ ] Save file
+
+COMMIT CHANGES
+--------------
+[ ] git add frontend/app.js
+[ ] git commit -m "Update API URL for production"
+[ ] git push
+
+VERCEL ACCOUNT (Frontend)
+-------------------------
+[ ] Go to vercel.com
+[ ] Sign up with GitHub
+[ ] Authorize Vercel
+
+DEPLOY FRONTEND
+---------------
+[ ] Click "Add New..." → "Project"
+[ ] Import: pulse-hr-tool
+[ ] Framework Preset: Other
+[ ] Root Directory: ./
+[ ] Output Directory: frontend
+[ ] Build Command: (leave empty)
+[ ] Click "Deploy"
+[ ] Wait 1-2 minutes
+[ ] Copy URL (e.g., https://pulse-hr-tool.vercel.app)
+
+TEST DEPLOYMENT
+---------------
+[ ] Open Vercel URL in browser
+[ ] Test login (Admin password: admin123)
+[ ] Check dashboard loads
+[ ] Try adding employee
+[ ] Test leave application
+[ ] Check photos work
+[ ] Test on mobile device
+[ ] Test on different browsers
+[ ] Verify all features working
+
+VERIFY BACKEND
+--------------
+[ ] Open: https://your-backend.onrender.com/api/dashboard
+[ ] Should return JSON
+[ ] Open: https://your-backend.onrender.com/api/employees
+[ ] Should return employee array
+[ ] Check Render logs for errors
+
+VERIFY FRONTEND
+---------------
+[ ] All pages load correctly
+[ ] No console errors (F12)
+[ ] Dashboard displays data
+[ ] Charts render properly
+[ ] Photos display correctly
+[ ] Mobile responsive works
+[ ] All buttons functional
+
+POST-DEPLOYMENT
+---------------
+[ ] Update README with live URLs
+[ ] Add deployment badge to GitHub
+[ ] Share URLs in resume/portfolio
+[ ] Test from different devices
+[ ] Monitor Render/Vercel dashboards
+
+OPTIONAL ENHANCEMENTS
+--------------------
+[ ] Add custom domain to Vercel
+[ ] Add custom domain to Render
+[ ] Set up monitoring (UptimeRobot)
+[ ] Add analytics (Google Analytics)
+[ ] Set up error tracking (Sentry)
+[ ] Enable auto-scaling
+[ ] Add SSL certificate (automatic)
+
+YOUR LIVE URLS
+--------------
+Frontend: https://pulse-hr-tool.vercel.app
+Backend:  https://pulse-hr-backend.onrender.com
+GitHub:   https://github.com/adityarkulkarni45-ux/pulse-hr-tool
+
+SHARE LINKS
+-----------
+[ ] Add to resume
+[ ] Update LinkedIn
+[ ] Share on portfolio website
+[ ] Email to HR with live demo
+[ ] Share on social media
+
+TROUBLESHOOTING CHECKLIST
+-------------------------
+If backend not working:
+[ ] Check Render logs
+[ ] Verify Start Command correct
+[ ] Check environment variables
+[ ] Wait for cold start (30-60 sec)
+
+If frontend not working:
+[ ] Check browser console (F12)
+[ ] Verify API URL in app.js
+[ ] Check Vercel deployment logs
+[ ] Clear browser cache
+[ ] Check CORS headers
+
+If API connection fails:
+[ ] Verify backend URL correct
+[ ] Check CORS configuration
+[ ] Test backend URL directly
+[ ] Check network tab in DevTools
+
+MAINTENANCE
+-----------
+[ ] Monitor Render dashboard weekly
+[ ] Check Vercel analytics monthly
+[ ] Update dependencies (if any)
+[ ] Backup data regularly
+[ ] Test features periodically
+
+================================================================
+           DEPLOYMENT COMPLETE! 🎉
+================================================================
+
+Your application is now live and accessible worldwide!
+
+Next Steps:
+1. Test all features thoroughly
+2. Share the live URL with HR
+3. Add to your portfolio
+4. Monitor performance
+5. Gather feedback
+
+================================================================

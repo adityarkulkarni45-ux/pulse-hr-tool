@@ -1,0 +1,28 @@
+{
+  "name": "pulse-hr-tool",
+  "version": "1.0.0",
+  "description": "Modern HR Management System with Zero Dependencies",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "node backend/db.test.js"
+  },
+  "keywords": [
+    "hr",
+    "management",
+    "employee",
+    "leave",
+    "nodejs",
+    "rest-api"
+  ],
+  "author": "Aditya Kulkarni <adityarkulkarni45@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adityarkulkarni45-ux/pulse-hr-tool.git"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
